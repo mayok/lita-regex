@@ -1,19 +1,41 @@
 # lita-regex
 
-TODO: Add a description of the plugin.
+show pattern matched text
 
 ## Installation
 
 Add lita-regex to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-regex"
+gem "lita-regex", github: 'mayok/lita-regex'
 ```
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+### Required attributes
+
+* `channel_name` (String) - channel name
+
+
+### Json format
+
+* `text` (String)
+* `pattern` (String)
+* `count` (Integer)
+
+### Example
+
+``` ruby
+Lita.configure do |config|
+  config.robot.adapter = :slack
+  config.handlers.regex.channel_name = "general"
+end
+```
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+`curl -d '{"text": "TEXT", "pattern": "PATTERN", "count": COUNT}' APP_URL`
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
