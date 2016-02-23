@@ -16,13 +16,6 @@ gem "lita-regex", github: 'mayok/lita-regex'
 
 * `channel_name` (String) - channel name
 
-
-### Json format
-
-* `text` (String)
-* `pattern` (String)
-* `count` (Integer)
-
 ### Example
 
 ``` ruby
@@ -34,7 +27,7 @@ end
 
 ## Usage
 
-`curl -d '{"text": "TEXT", "pattern": "PATTERN", "count": COUNT}' APP_URL`
+`curl -d "TEXT PATTERN COUNT" APP_URL`
 
 ## License
 
